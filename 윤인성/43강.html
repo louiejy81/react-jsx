@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.addEventListener():문서객체에 이벤트 연결
+        //addEventListener('이벤트의 이름', 이벤트 발생시 호출할 함수)
+        //()=>{} : 이벤트 리스너, 이벤트 핸들러라고 부름
+        // document.addEventListener('DOMContentLoaded',()=>{
+        //         const header=document.createElement('h1')
+        //         document.body.appendChild(header)
+
+        //         //클릭 횟수를 나타내는 변수
+        //         let count=0
+        //         header.style.userSelect='none'
+        //         header.innerText = `클릭 횟수: ${count}`
+        //         //이벤트 연결
+        //         header.addEventListener('click',()=>{
+        //             count++
+        //             header.innerText = `클릭 횟수: ${count}`
+
+        //         })
+        // })
+    </script>
+</head>
+<body>
+    <script>
+        //태그 꾸미기
+        const header=document.createElement('h1')
+        header.innerText = `클릭횟수:0`
+
+        const p=document.createElement('p')
+        p.innerText = `이벤트 연결 상태: 해제` //초기 상태는 해제
+
+        const connectButton=document.createElement('button')
+        connectButton.innerText = `이벤트 연결 버튼`
+
+        const disconnectButton=document.createElement('button')
+        disconnectButton.innerText = `이벤트 해제 버튼`
+
+        
+        
+    </script>
+    
+    
+</body>
+</html>

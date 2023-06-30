@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 문서객체 생성,제거 -->
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            //생성
+            const header=document.createElement('h1')
+            //textContent에 글자 입력
+            header.textContent = 'createElement로 만든 태크'
+            header.style.color = 'red'
+
+            //header가 body태그 안에서 붙게됨
+            const body = document.querySelector('body')//body요소선택
+            body.appendChild(header)
+            
+            setTimeout(()=>{
+                //제거하기
+            // body.removeChild(header)
+
+            //header.parentNode -> body
+            header.parentNode.removeChild(header)
+            },2000)
+            
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

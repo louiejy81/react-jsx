@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+         //문서객체 이동
+         const header = document.createElement('h2')
+         header.textContent = '안녕하세요'
+         header.style.color = 'blue'
+         
+        //  const first = document.querySelector('.first')
+        //  const second = document.querySelector('.second')
+
+        //타이머 테크닉2
+        const array = [
+        document.querySelector('.first'), //[카운터%2]=0일때
+        document.querySelector('.second')] //[카운터%2]=1일때 
+
+        let 카운터 = 0
+        
+        const fun = (()=>{
+            array[카운터%2].appendChild(header)
+            카운터++
+        })
+        setInterval(fun, 1000) //fun 함수를 1초마다 반복
+        fun()
+
+
+        //  first.appendChild(header)
+         //2초후 문서객체 second로 이동
+        //  setTimeout(()=>{
+        //     second.appendChild(header)
+        //  }, 2000)
+
+        // //위아래로 태그가 이동: 타이머 관련테크닉1
+        // const toFirst = ()=>{
+        //     first.appendChild(header)
+        //     //반대편을 1초후 호출하기
+        //     setTimeout(toSecond, 1000)
+        // }
+        // const toSecond = ()=>{
+        //     second.appendChild(header)
+        //     setTimeout(toFirst, 1000)
+
+        // }
+        // //발동!
+        // toFirst()
+            
+        })
+    </script>
+</head>
+<body>
+    <div class="first">
+        <h1>첫번째 div태그 내부</h1>
+    </div>
+    <hr>
+    <div class="second">
+        <h1>두번째 div태그 내부</h1>
+    </div>
+</body>
+</html>
